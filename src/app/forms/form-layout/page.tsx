@@ -15,7 +15,6 @@ const Form = dynamic(() => import("@formio/react").then((module) => module.Form)
 
 const FormLayout = () => {
   const formInstance = useRef(null);
-
   // Definición del formulario en formato JSON
   const formDefinition = {
     display: "form",
@@ -46,8 +45,6 @@ const FormLayout = () => {
       console.log("El formulario no está listo aún.");
       return;
     }
-    formInstance.current.getComponent('firstName')?.setValue('Juan');
-    formInstance.current.getComponent('lastName')?.setValue('Pérez');
   };
 
   return (
@@ -61,6 +58,7 @@ const FormLayout = () => {
             formInstance.current = instance;
           }}
         />
+
         <button onClick={handleClick} className="mt-4 p-2 bg-blue-500 text-white rounded">
           Setear Nombres
         </button>
