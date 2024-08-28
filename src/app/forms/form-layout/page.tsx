@@ -5,14 +5,13 @@ import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
 
-export const metadata: Metadata = {
-  title: "Next.js Form Layout | TailAdmin - Next.js Dashboard Template",
-  description:
-    "This is Next.js Form Layout page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
-};
+
 
 // Importación dinámica del formulario para que se renderice solo en el cliente
 const Form = dynamic(() => import("@formio/react").then((module) => module.Form), { ssr: false });
+
+
+
 
 const FormLayout = () => {
   const formInstance = useRef(null);
