@@ -54,9 +54,7 @@ const FormLayout = () => {
       <div className="p-6 bg-white rounded-lg shadow-md">
         <Form
           form={formDefinition}
-          onFormReady={(instance) => {
-            formInstance.current = instance;
-          }}
+     
         />
 
         <button onClick={handleClick} className="mt-4 p-2 bg-blue-500 text-white rounded">
